@@ -1,0 +1,30 @@
+/*
+
+The counting took a bit to figure out, but it wasn't too complicated
+
+Runtime 0 ms
+Beats 100.00%
+
+Memory 7.85 MB
+Beats 72.84%
+
+*/
+class Solution {
+public:
+    int climbStairs(int n) {
+        //initialization and declaration
+        int prev=1;
+        int curr=0;
+        int temp=0;
+        //loops through the number of numbers using the Fibonacci sequence 
+        while(n!=-1){
+            //cout << curr << " " << prev << endl;
+            temp= prev;
+            prev= curr;
+            curr= temp+curr;
+            //temp=0;
+            n--;
+        }
+        return curr;
+    }
+};
